@@ -164,6 +164,9 @@ if [ -f /sys/devices/soc0/soc_id ]; then
 fi
 
 case "$platformid" in
+	"614")
+		/vendor/bin/sh /vendor/bin/init.kernel.post_boot-cliffs.sh
+		;;
 	"557"|"577")
 		/vendor/bin/sh /vendor/bin/init.kernel.post_boot-pineapple.sh
 		;;
